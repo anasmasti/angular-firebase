@@ -1,0 +1,32 @@
+<div>
+    <div>
+        <h1>Crée un compte</h1>
+        <div>
+            <input type="email" class="formControl" placeholder="Email Address" #userEmail required />
+        </div>
+        <div class="formGroup">
+            <input type="password" class="formControl" placeholder="Password" #userPwd required />
+        </div>
+        <div>
+            <button type="button" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">Creé
+                un compte</button>
+
+        </div>
+        <br>
+       <div class="line"> </div>
+  <br>
+        <div>
+            <button type="button" class="google-btn" (click)="authService.GoogleAuth()">
+                <img src="../../../assets/images/google-logo.png" alt="Google Logo" class="google-logo">
+                Continuer avec Google
+            </button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div>
+        <span>Vous avez déjà un compte?
+            <a routerLink="/sign-in">Connexion</a>
+        </span>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div>
+    <h1>Todo List</h1>
+    <form [formGroup]="todoForm" (submit)="addTodo()">
+        <input type="text" formControlName="todo" placeholder="Todo1...">
+        <button type="submit" [disabled]="!todoForm.valid">
+            Ajouter
+        </button>
+    </form>
+
+</div>

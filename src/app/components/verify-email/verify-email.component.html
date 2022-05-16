@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <h1>Merci de votre inscription</h1>
+        <div *ngIf="authService.userData as user">
+            <p>Nous avons envoyé un e-mail de confirmation à <strong>{{user.email}}</strong>.
+            </p>
+            <p>Veuillez vérifier votre e-mail et cliquez sur le lien pour vérifier votre adresse
+                e-mail.</p>
+        </div>
+        <div>
+            <button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
+                <i class="fas fa-redo-alt"></i>
+                Renvoyer l'e-mail de vérification
+            </button>
+        </div>
+    </div>
+    <div>
+        <span>Revenir à la connexion?<a routerLink="/sign-in"> S'identifier</a></span>
+    </div>
+</div>

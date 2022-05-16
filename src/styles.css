@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+html {
+  margin: 0;
+  padding: 0;
+  background: #1e0c3e;
+  color: white;
+}
+
+input {
+  padding: 8px;
+  background: #4b3374;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px
+}
+input::placeholder {
+  color: #dddddd !important;
+}
+
+button {
+  padding: 8px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin-top: 10px;
+}
+button:hover {
+  background: white;
+  color: black;
+}
+
+a {
+  color: #bbb1cb;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+a:hover {
+  color: white;
+}
+
+.google-btn {
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center; 
+  gap: 3px;
+}
+.google-btn:hover {
+  background: black;
+  color: white;
+}
+
+.google-logo {
+    width: 20px
+}
+
+.line {
+    width: 150px;border: solid 1px #4b3374;
+}
