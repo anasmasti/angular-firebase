@@ -42,6 +42,7 @@ a {
   color: #bbb1cb;
   text-decoration: none;
   transition: all 0.4s;
+  cursor: pointer;
 }
 a:hover {
   color: white;
@@ -65,4 +66,21 @@ a:hover {
 
 .line {
     width: 150px;border: solid 1px #4b3374;
+}
+
+.error {
+  padding:10px;
+  background: red;
+  border-radius: 5px;
+}
+
+.online {
+  font-size: 40px;
+  color: green;
+}
+
+.success {
+  padding:10px;
+  background: green;
+  border-radius: 5px;
 }

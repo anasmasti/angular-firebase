@@ -22,6 +22,7 @@ import { TodoService } from './services/todo.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -51,6 +52,7 @@ const routes: Routes = [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     AngularFireAuthModule,
     AngularFirestoreModule,

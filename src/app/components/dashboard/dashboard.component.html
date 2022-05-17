@@ -1,10 +1,9 @@
 <div>
     <div>
-        <strong *ngIf="authService.userData as user">{{user.email}}</strong>
-        <a href="#" (click)="authService.SignOut()">
-            Log out
+        <strong *ngIf="authService.userData as user"><span class="online">.</span> {{user.email}}</strong>
+        <a (click)="authService.SignOut()">
+           | Se déconnecter
         </a>
-
     </div>
 
     <main>
