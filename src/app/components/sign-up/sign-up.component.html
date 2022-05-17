@@ -5,10 +5,10 @@
     <div>
         <h1>Crée un compte</h1>
         <div>
-            <input type="email" class="formControl" placeholder="Email Address" #userEmail required />
+            <input type="email" class="formControl" placeholder="Enter ton E-mail" #userEmail required />
         </div>
         <div class="formGroup">
-            <input type="password" class="formControl" placeholder="Password" #userPwd required />
+            <input type="password" class="formControl" placeholder="Enter ton mot de passe" #userPwd required />
         </div>
         <div>
             <button type="button" value="Sign Up" (click)="signUp(userEmail.value, userPwd.value)">Creé
