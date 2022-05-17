@@ -2,7 +2,7 @@
     <div>
         <strong *ngIf="authService.userData as user"><span class="online">.</span> {{user.email}}</strong>
         <a (click)="authService.SignOut()">
-           | Se déconnecter
+            | Se déconnecter
         </a>
     </div>
 

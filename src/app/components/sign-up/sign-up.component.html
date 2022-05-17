@@ -11,13 +11,13 @@
             <input type="password" class="formControl" placeholder="Enter ton mot de passe" #userPwd required />
         </div>
         <div>
-            <button type="button" value="Sign Up" (click)="signUp(userEmail.value, userPwd.value)">Creé
-                un compte</button>
-
+            <button type="button" value="Sign Up" (click)="signUp(userEmail.value, userPwd.value)">
+                Creé un compte
+            </button>
         </div>
         <br>
-       <div class="line"> </div>
-  <br>
+        <div class="line"> </div>
+        <br>
         <div>
             <button type="button" class="google-btn" (click)="authService.GoogleAuth()">
                 <img src="../../../assets/images/google-logo.png" alt="Google Logo" class="google-logo">
