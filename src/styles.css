@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 * {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 html {
   margin: 0;
@@ -52,7 +52,7 @@ a:hover {
   background: white;
   color: black;
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 3px;
 }
 .google-btn:hover {
@@ -61,15 +61,16 @@ a:hover {
 }
 
 .google-logo {
-    width: 20px
+  width: 20px;
 }
 
 .line {
-    width: 150px;border: solid 1px #4b3374;
+  width: 150px;
+  border: solid 1px #4b3374;
 }
 
 .error {
-  padding:10px;
+  padding: 10px;
   background: red;
   border-radius: 5px;
 }
@@ -80,7 +81,7 @@ a:hover {
 }
 
 .success {
-  padding:10px;
+  padding: 10px;
   background: green;
   border-radius: 5px;
 }

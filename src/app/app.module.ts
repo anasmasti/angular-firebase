@@ -58,7 +58,7 @@ const routes: Routes = [
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [AuthenticationService, TodoService],
   bootstrap: [AppComponent],
