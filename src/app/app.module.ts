@@ -20,6 +20,8 @@ import { AuthGuard } from './guard/auth.guard';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodoService } from './services/todo.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 
 const routes: Routes = [
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -48,6 +50,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore()),
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,

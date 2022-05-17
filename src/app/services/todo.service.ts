@@ -1,34 +1,40 @@
 import { Injectable } from '@angular/core';
 import { Todo } from '../models/Todo.model';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
+import {
+  addDoc,
+  Firestore,
+  collection,
+  getDocs,
+  deleteDoc,
+  doc,
+} from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodoService {
-  todo!: AngularFirestoreDocument<any>;
-  todos!: any;
-
-  constructor(private db: AngularFirestore) {}
+  constructor(private firestore: Firestore) {}
 
   addTodo(todo: Todo) {
-    const todoRef = this.db.doc('todo');
-    todoRef.set(todo);
+    let todosCollection = collection(this.firestore, 'todos');
+    addDoc(todosCollection, todo);
   }
 
-  getTodoList() {
-    this.todo = this.db.doc('todo');
-    return this.todo
-  }
-
-  updateTodo(id: any, todo: Todo) {
-    const todoRef = this.db.doc('todo');
-    todoRef.update(todo);
+  async getTodoList() {
+    let todosCollection = collection(this.firestore, 'todos');
+    let todos: any[] = [];
+    await getDocs(todosCollection).then((res) => {
+      todos = [
+        ...res.docs.map((todo) => {
+          return { ...todo.data(), uid: todo.id };
+        }),
+      ];
+    });
+    return todos;
   }
 
   deleteTodo(id: string) {
-    const todoRef = this.db.doc('todo');
-    todoRef.delete();
+    let selectedTodo = doc(this.firestore, 'todos', id);
+    deleteDoc(selectedTodo);
   }
 }

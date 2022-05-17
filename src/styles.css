@@ -13,10 +13,10 @@ input {
   padding: 8px;
   background: #4b3374;
   color: white;
-  font-weight: bold;
   border-radius: 5px;
   border: none;
-  margin-top: 5px
+  margin-top: 5px;
+  width: 250px;
 }
 input::placeholder {
   color: #dddddd !important;

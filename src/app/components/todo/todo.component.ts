@@ -14,7 +14,7 @@ export class TodoComponent implements OnInit {
   constructor(public fb: FormBuilder, private todoApi: TodoService) {}
   ngOnInit(): void {
     this.initTodoForm();
-    this.getTodoList()
+    this.getTodoList();
   }
 
   initTodoForm() {
@@ -26,19 +26,17 @@ export class TodoComponent implements OnInit {
   addTodo() {
     this.todoApi.addTodo(this.todoForm.value);
     this.todoForm.reset();
+    this.getTodoList();
   }
 
   getTodoList() {
-    this.todoApi
-      .getTodoList()
-      .valueChanges()
-      .subscribe((todos) => {
-        this.todos = todos;
-      });
+    this.todoApi.getTodoList().then((todos) => {
+      this.todos = todos;
+    });
   }
 
   deleteTodo(id: any) {
     this.todoApi.deleteTodo(id);
-    this.getTodoList()
+    this.getTodoList();
   }
 }
