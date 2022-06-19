@@ -1,1 +1,1 @@
-### Firebase with Angular
+### Angular Firebase
